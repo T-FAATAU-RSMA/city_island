@@ -4,11 +4,9 @@ include("connexion_bdd.php");
     class iles{
         
         /**
-         * Update DbShoop "livres"
-         *
-         * @param string $new_nom 
-         * @param int $new_prix 
-         * @param int $id_livre
+         * Retrieving v.name from 'ile_ville'
+         * 
+         * @pâram int $id
          *
          */
         public function getcity($getVilles){
