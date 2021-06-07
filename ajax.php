@@ -2,9 +2,9 @@
 
 include 'class/class_iles.php';
 
-    $iles_obj = new iles();
+    $iles_obj = new iles();//variable iles_obj = nouvelle iles 
 
-    $getIles = $_POST['getVilles'];
+    $getIles = $_POST['getVilles']
 
     $res_getcity = $iles_obj->getcity($getIles);
     echo $res_getcity;

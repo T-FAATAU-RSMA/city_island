@@ -16,7 +16,7 @@ $res_listiles = $connect_bdd->query($req_listiles); //$result : execute la reque
 
 print '<select id="select_listIles">';
 
-   foreach ($res_listiles as $value) {
+   foreach ($res_listiles as $value) {//pour chaque résultat de $res_listiles récupérer la valeur
         
        print '<option value="'.$value["name"].'">';
            print $value["name"];    
@@ -49,17 +49,18 @@ print '</select>';
     
 
 // -------------------------Function ----------------------
-
+    //fonction ajax qui va afficher les villes de l'ile concerné
     function getVilles(jsVilles){
 
 
         $.ajax({
+            //methode POST
             type: 'post',
             url: 'ajax.php',
             data: {
                 'getVilles': jsVilles
             },
-            dataType: 'json',
+            dataType: 'json',//type de donnée json
             success: function(data){
                 // alert(data.donnee);
                 // data = JSON.parse(data);
