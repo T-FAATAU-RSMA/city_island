@@ -2,8 +2,15 @@
 include("connexion_bdd.php");
 
     class iles{
-
-        //Recupérer les villes
+        
+        /**
+         * Update DbShoop "livres"
+         *
+         * @param string $new_nom 
+         * @param int $new_prix 
+         * @param int $id_livre
+         *
+         */
         public function getcity($getVilles){
             global $connect_bdd;
 
