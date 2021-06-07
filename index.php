@@ -10,15 +10,18 @@
     require('connexion_bdd.php');
 
 
-$req_listiles = "SELECT * from iles" ; //$sql : contient la requete sql 
-$res_listiles = $connect_bdd->query($req_listiles); //$result : execute la requete $sql
+$req_listiles = "SELECT * from iles" ; 
+//$sql : contient la requete sql 
+$res_listiles = $connect_bdd->query($req_listiles); 
+//$result : execute la requete $sql
 
 
 print '<select id="select_listIles">';
 
-   foreach ($res_listiles as $value) {//pour chaque résultat de $res_listiles récupérer la valeur
+   foreach ($res_listiles as $value) {
+       //pour chaque résultat de $res_listiles récupérer la valeur
         
-       print '<option value="'.$value["name"].'">';
+        print '<option value="'.$value["name"].'">';
            print $value["name"];    
         print '</option>';
     }
